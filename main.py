@@ -82,6 +82,10 @@ class API(object):
 		self.seq+=1
 		decoded_data=self.decrypt(r.content)
 		res= json.loads(decoded_data)
+		if 'maintenance' in res:
+			self.log('Server Maintenance..')
+			self.isMaintenance=True
+			exit(1)
 		if 'result' in res and res['result'] <>0:
 			self.log('%s(): %s'%(inspect.stack()[1][3],res['result']))
 		if 'user_id' in res:
