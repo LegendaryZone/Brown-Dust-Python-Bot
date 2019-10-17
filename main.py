@@ -86,10 +86,6 @@ class API(object):
 			self.log('%s(): %s'%(inspect.stack()[1][3],res['result']))
 		if 'user_id' in res:
 			self.log('hello %s:%s'%(res['user_id'],res['owner_index']))
-		#if inspect.stack()[1][3]=='userCampaignStageStart':
-		#	self.log(data)
-		#	self.log('\n')
-		#	self.log(decoded_data)
 		return res
 		
 	def log(self,msg):
