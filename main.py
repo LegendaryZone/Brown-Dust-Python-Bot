@@ -24,7 +24,7 @@ class API(object):
 		self.crypter=RijndaelEncryptor()
 		self.key='abcdefghijkrstuv024680wxyzlmnopq'
 		self.seq=2
-		self.version='1.38.10'
+		self.version='1.43.12'
 		self.db=Database()
 		
 	def reroll(self):
@@ -527,7 +527,6 @@ class API(object):
 			pass
 		else:
 			pass
-		#self.getReward(self.missionInvenInsert('{"seq":"67","0":{"code":"%s","value":"1"},"list_count":"1"}'%(id)))			
 
 	def finishQuest(self,campaign_level,campaign_number):
 		self.log('doing campaign_level:%s campaign_number:%s'%(campaign_level,campaign_number))
@@ -550,7 +549,6 @@ class API(object):
 			self.fakerewards(campaign_number)
 
 if __name__ == "__main__":
-	#fuckyou
 	reload(sys)  
 	sys.setdefaultencoding('utf8')
 	a=API()
